@@ -1,0 +1,231 @@
+.lk {
+  margin-bottom: 10rem;
+  @media (max-width: 767px) {
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+  }
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+  &__text {
+    max-width: 56rem;
+  }
+
+  &__wrap {
+    display: flex;
+    gap: 5rem;
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+  &__left {
+    width: 34rem;
+    flex: none;
+    padding-right: 3rem;
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+  }
+  &__right {
+    width: calc(100% - 39rem);
+    &:before {
+      content: "";
+      display: block;
+      position: fixed;
+      background: #fafafa;
+      height: 100vh;
+      z-index: -1;
+      top: 0px;
+      right: 0px;
+      width: calc(((100vw - 144rem) / 2) + 141.5rem - 34rem);
+      @media (max-width: 1100px) {
+        display: none;
+      }
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    margin-bottom: 3.3rem;
+    border-bottom: 1px solid $color-border;
+    ul {
+      @include ulClean;
+      li {
+        a {
+          font-size: 1.8rem;
+          display: flex;
+          align-items: center;
+          line-height: 1em;
+          margin-bottom: 2.8rem;
+          display: flex;
+          align-items: center;
+          gap: 1.8rem;
+        }
+      }
+    }
+  }
+  &__link {
+    i {
+      color: #dedede;
+    }
+    &.active {
+      font-weight: bold;
+      i {
+        color: $color-second;
+      }
+    }
+  }
+  &__img {
+    margin-top: 6rem;
+    text-align: center;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__bg {
+    background: #fff;
+    padding: 3rem 4.5rem 4.5rem 4.5rem;
+    border: 0.5rem;
+    border: 1px solid $color-border;
+
+    @media (max-width: 480px) {
+      padding: 2rem;
+    }
+  }
+  &__hr {
+    border-bottom: 1px solid $color-border;
+    margin: 3.5rem 0;
+  }
+  &__subtitle {
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  &-order {
+    border: 1px solid $color-border;
+    padding: 6.4rem 5.6rem;
+    padding-top: 1.9rem;
+    padding-bottom: 0rem;
+    background: #fff;
+    margin-bottom: 2rem;
+    @media (max-width: 767px) {
+      padding: 2rem 2rem;
+      padding-top: 1rem;
+      padding-left: 6rem;
+    }
+    &__top {
+      padding-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      cursor: pointer;
+    }
+    &__icon {
+      @include flexcc;
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 50%;
+      background: $color-text;
+      color: #fff;
+      font-size: 1.4rem;
+      margin-top: 0.6rem;
+      margin-left: -4rem;
+      &:before {
+        content: "\2b";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        // content: "\f068";
+      }
+    }
+    &__inner-name {
+      display: flex;
+      gap: 1.1rem;
+      align-items: center;
+    }
+    &__title {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    &__date {
+      font-size: 1.4rem;
+      color: #939399;
+    }
+    &__status {
+      display: inline-flex;
+      border-radius: 0.5rem;
+      align-items: center;
+      height: 2.4rem;
+      padding: 0 1.2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      &_success {
+        background: #edf7ee;
+        color: #53b357;
+      }
+      &_cancel {
+        background: #fbe8eb;
+        color: $color-primary;
+      }
+    }
+    &__options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 5rem;
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        column-gap: 2rem;
+      }
+    }
+    &-option {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
+      align-items: flex-start;
+      &__name {
+        font-weight: bold;
+      }
+      &__value {
+        max-width: 24rem;
+        text-align: right;
+      }
+      &__dots {
+        border-bottom: 1px dotted $color-text;
+        flex: 1;
+        height: 1em;
+      }
+    }
+
+    &__info {
+      margin-bottom: 3rem;
+      display: none;
+      @media (max-width: 480px) {
+        margin-left: -4rem;
+      }
+    }
+
+    &__middle {
+      display: none;
+      padding-bottom: 2rem;
+      @media (max-width: 480px) {
+        margin-left: -4rem;
+      }
+    }
+    &.open {
+      .lk-order__info,
+      .lk-order__middle {
+        display: block;
+      }
+      .lk-order__icon:before {
+        content: "\f068";
+      }
+    }
+  }
+}

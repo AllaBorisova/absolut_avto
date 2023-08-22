@@ -1,0 +1,151 @@
+main.main
+	.container
+		.breadcrumbs
+			ul
+				li
+					a(href="/") Главная
+				li
+					span.breadcrumbs__arrow
+				li
+					span Оформление заказа
+		h1.h1 Оформление заказа
+		form.order-detail
+			.order-detail__left 
+				.order-detail__block 
+					.order-detail__block-title 
+						.order-detail__count
+							i.fa-solid.fa-location-dot
+						.order-detail__title Тип покупателя и регион доставки 
+					.order-detail__block-body 
+						.order-detail__block-field 
+							.order-detail__block-label Местоположение
+								sup *
+							.order-detail__block-input.order-detail__block-input_search
+								.clear-input
+									i.fa-solid.fa-xmark
+								input(type="text" value="Оренбург, Оренбургская область, Поволжье, Россия")
+							.block-info-grey
+								i.fa-solid.fa-circle-info
+								| Выберите свой город в списке. Если вы не нашли свой город, выберите «другое местоположение», и напишите свой город
+
+				.order-detail__block 
+					.order-detail__block-title 
+						.order-detail__count
+							i.fa-solid.fa-truck-fast
+						.order-detail__title Способ доставки 
+					.order-detail__block-body 
+						label.custom-radio 
+							input.custom-radio__radio(type="radio" name="delivery")
+							span.custom-radio__span
+							span.custom-radio__label Самовывоз — бесплатно
+						label.custom-radio 
+							input.custom-radio__radio(type="radio" name="delivery")
+							span.custom-radio__span
+							span.custom-radio__label Курьером — 250 ₽
+						label.custom-radio 
+							input.custom-radio__radio(type="radio" name="delivery")
+							span.custom-radio__span
+							span.custom-radio__label По городу Оренбург — 250 ₽
+						label.custom-radio 
+							input.custom-radio__radio(type="radio" name="delivery")
+							span.custom-radio__span
+							span.custom-radio__label VIP-доставка — 250 ₽ 
+				.order-detail__block 
+					.order-detail__block-title 
+						.order-detail__count
+							i.fa-solid.fa-wallet
+						.order-detail__title Способ оплаты
+					.order-detail__block-body 
+						label.custom-radio 
+							input.custom-radio__radio(type="radio" name="pay")
+							span.custom-radio__span
+							span.custom-radio__label Наличными при получении
+						label.custom-radio 
+							input.custom-radio__radio(type="radio" name="pay")
+							span.custom-radio__span
+							span.custom-radio__label Наличными при самовывозе
+						label.custom-radio 
+							input.custom-radio__radio(type="radio" name="pay")
+							span.custom-radio__span
+							span.custom-radio__label Картой на сайте
+				.order-detail__block 
+					.order-detail__block-title 
+						.order-detail__count
+							i.fa-solid.fa-user
+						.order-detail__title Покупатель
+					.order-detail__block-body 
+						.order-detail__block-field 
+								.order-detail__block-label Ф.И.О.
+									sup *
+								.order-detail__block-input
+									input(type="text" value="")
+						.order-detail__block-field 
+								.order-detail__block-label E-Mail (необязательно для заполнения)
+								.order-detail__block-input
+									input(type="email" value="")
+						.order-detail__block-field 
+								.order-detail__block-label Телефон
+									sup *
+								.order-detail__block-input
+									input(type="tel" value="")
+						.order-detail__block-field 
+								.order-detail__block-label Адрес доставки
+									sup *
+								.order-detail__block-input
+									textarea()
+						.order-detail__block-field 
+								.order-detail__block-label Комментарий к заказу:
+								.order-detail__block-input
+									textarea()
+				.order-detail__block 
+					.order-detail__block-title 
+						.order-detail__count.order-detail__count_red 
+							i.fa-solid.fa-gear
+						.order-detail__title Товары в заказе
+					.order-detail__items 
+						.order-detail__item-top 
+							.order-detail__item-name Наименование
+							.order-detail__item-sale Скидка
+							.order-detail__item-price Цена
+							.order-detail__item-count Кол-во
+							.order-detail__item-summ Сумма
+						.order-detail__item 
+							.order-detail__item-name 
+								.cart-detail__img
+									a(href="")
+										img(src="./img/product-big.png" alt="")
+								.cart-detail__about
+									a.catalog__name(href="") Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз
+									.catalog__artikul
+										a(href="") LADA 21050350204090
+										| 
+										span 4221v
+							.order-detail__item-sale 0 %
+							.order-detail__item-price 8 926 руб.
+							.order-detail__item-count 1 шт.
+							.order-detail__item-summ 8 926 руб.
+				.order-detail__flex
+					input.button.button_red(type="submit" value="Перейти к оплате заказа")
+					label.custom-checkbox 
+						input.custom-checkbox__checkbox(type="checkbox" name="")
+						span.custom-checkbox__span
+						span.custom-checkbox__label Даю согласие на обработку своих 
+							a(href="") персональных данных
+
+			.order-detail__right 
+				.order-detail__block-title 
+					.order-detail__title Ваш заказ
+					a.change-link(href="") ИЗМЕНИТЬ
+				.order-detail__options 
+					.order-detail__option
+						span.order-detail__option-name Товаров на сумму
+						span.order-detail__option-dots
+						span.order-detail__option-name 8 926 руб.
+					.order-detail__option
+						span.order-detail__option-name Доставка
+						span.order-detail__option-dots
+						span.order-detail__option-name Бесплатно
+				.order-detail__itog 
+					span ИТОГО:
+					span 8 926 руб.
+		.section-about__info Предложения на сайте не являются публичной офертой

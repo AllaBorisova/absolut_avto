@@ -1,0 +1,208 @@
+.cart-detail {
+  @media (max-width: 992px) {
+    // flex-wrap: wrap;
+    // gap: 2rem;
+  }
+  &__info {
+    padding-top: 2.7rem;
+    padding-bottom: 3.2rem;
+    padding-left: 2.8rem;
+    padding-right: 3rem;
+    border: 1px solid $color-border;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    flex-wrap: wrap;
+    @media (max-width: 480px) {
+      padding: 2rem;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    padding-left: 3rem;
+    margin-bottom: 3rem;
+    background: url(../img/ruble.png) center left no-repeat;
+    background-size: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  &__summ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $color-input-border;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    padding: 2rem 0;
+  }
+  &__delivery {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid $color-input-border;
+    padding: 2rem 0;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    justify-content: space-between;
+  }
+  &__price {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  &__itog {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.4rem;
+    font-size: 2.2rem;
+  }
+  &__items {
+    margin-bottom: 10rem;
+    border: 1px solid $color-border;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-border;
+    padding: 1rem 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    @media (max-width: 480px) {
+      padding: 2rem;
+      justify-content: center;
+    }
+  }
+  &__search {
+    input[type="text"] {
+      width: 65rem;
+      padding-left: 3rem;
+      padding-right: 7rem;
+      height: 5rem;
+      border-radius: 0.5rem;
+      border: none;
+      background: #ffffff;
+      font-size: 1.6rem;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+    }
+  }
+  &__count {
+    font-size: 1.6rem;
+    text-decoration: underline;
+  }
+  &__clear {
+    font-size: 1.6rem;
+    i {
+      margin-right: 1rem;
+    }
+  }
+  &__item {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns:
+      minmax(min-content, 17rem) minmax(min-content, 49rem)
+      minmax(min-content, 16rem) minmax(min-content, 15rem) minmax(
+        min-content,
+        15rem
+      )
+      minmax(min-content, 15rem);
+    padding: 2.5rem 3rem;
+    align-items: center;
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-border;
+    }
+    // @media (max-width: 767px) {
+    //   grid-template-columns: 1fr;
+    //   gap: 1.5rem;
+    // }
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr 2fr;
+      padding: 1rem;
+      gap: 1rem;
+    }
+  }
+  &__full-price {
+    font-size: 2.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+
+    @media (max-width: 992px) {
+      text-align: left;
+    }
+  }
+  &__one-price {
+    // white-space: nowrap;
+    font-size: 1.4rem;
+    color: #a1a1a2;
+    span {
+      display: block;
+      font-size: 1.8rem;
+      color: $color-link;
+    }
+  }
+  &__img {
+    img {
+      max-width: 16rem;
+    }
+  }
+
+  &__product-name {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    display: block;
+  }
+  &__delete {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+.coupon {
+  &__title {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+  }
+  &__form {
+    position: relative;
+  }
+  &__input {
+    width: 65rem;
+    padding-left: 3rem;
+    padding-right: 7rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: $color-border;
+    font-size: 1.6rem;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+  &__submit {
+    display: block;
+    border-radius: 0.5rem;
+    position: absolute;
+
+    height: 4rem;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: $color-button-cart;
+    color: #fff;
+    font-size: 1.8rem;
+  }
+}

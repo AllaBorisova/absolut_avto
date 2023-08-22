@@ -1,0 +1,215 @@
+.section-about {
+  padding-top: 8.8rem;
+  background: $color-border;
+  @media (max-width: 480px) {
+    padding-top: 5rem;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+    margin-bottom: 7rem;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      margin-bottom: 4rem;
+    }
+  }
+  &__map {
+    border: 0.5rem solid #fff;
+  }
+  &__left {
+    background: url(../img/man.png) right bottom no-repeat #fff;
+    padding: 5rem 30rem 8rem 5rem;
+    background-size: 33.9rem;
+    @media (max-width: 1100px) {
+      padding-right: 25rem;
+      background-size: 50%;
+    }
+    @media (max-width: 992px) {
+      background-size: contain;
+    }
+    @media (max-width: 480px) {
+      background-image: none;
+      padding: 3rem;
+      padding-bottom: 5rem;
+    }
+  }
+  &__caption {
+    // font-size: 5rem;
+    // line-height: 1.1;
+    // font-weight: 600;
+    color: $color-primary;
+    margin-bottom: 2.6rem;
+    // font-family: $font-second;
+  }
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+  &__info {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: $color-footer-text;
+    text-align: center;
+    padding-bottom: 2.6rem;
+    @media (max-width: 480px) {
+      font-size: 1.4rem;
+    }
+  }
+}
+.section-how {
+  text-align: center;
+  margin-bottom: 7rem;
+  &__img {
+    margin-bottom: 4.5rem;
+    span {
+      font-size: 12rem;
+      line-height: 1em;
+      font-weight: 600;
+      color: $color-border;
+      font-family: $font-second;
+      text-transform: uppercase;
+      letter-spacing: 0.7rem;
+      @media (max-width: 992px) {
+        font-size: 8rem;
+      }
+      @media (max-width: 480px) {
+        font-size: 5rem;
+      }
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -4.5rem;
+    }
+  }
+  &__caption {
+    // font-size: 5rem;
+    // line-height: 6rem;
+    // font-weight: 600;
+    // font-family: $font-second;
+    // color: $color-link;
+    // margin-bottom: 3.4rem;
+  }
+  &__text {
+    color: $color-main-text;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+  }
+}
+.section-buy {
+  margin-bottom: 9rem;
+  @media (max-width: 480px) {
+    margin-bottom: 5rem;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.7rem;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+    }
+  }
+  &__item {
+    @include flexss;
+    background: #fff;
+    box-shadow: 0px 1.2rem 4rem 0px rgba(64, 63, 76, 0.17);
+    &:nth-child(odd) {
+      .section-buy__img {
+        background: url(../img/triangle1.png) top left no-repeat;
+        background-size: contain;
+      }
+    }
+    &:nth-child(even) {
+      .section-buy__img {
+        background: url(../img/triangle2.png) top left no-repeat;
+        background-size: contain;
+      }
+    }
+    @media (max-width: 992px) {
+      display: block;
+    }
+  }
+  &__img {
+    flex: none;
+    margin-top: -7rem;
+    margin-left: -3.5rem;
+    padding-top: 3rem;
+    padding-left: 2rem;
+  }
+  &__info {
+    padding-top: 3rem;
+    padding-bottom: 3.8rem;
+    padding-right: 1.5rem;
+    @media (max-width: 992px) {
+      padding-left: 1.5rem;
+      padding-top: 0rem;
+      margin-top: -2rem;
+    }
+  }
+  &__name {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: $color-link;
+    font-weight: bold;
+  }
+  &__text {
+    color: $color-main-text;
+    margin-bottom: 1.5rem;
+  }
+}
+.section-tech {
+  background: url(../img/tech.jpg) bottom right no-repeat;
+  background-position: right 0 bottom 2rem;
+  margin-bottom: -2rem;
+  position: relative;
+  z-index: 2;
+  @media (max-width: 1100px) {
+    background-size: 100%;
+  }
+
+  &__left {
+    max-width: 70.5rem;
+  }
+  &__caption {
+    // font-size: 5rem;
+    // line-height: 5.7rem;
+  }
+  &__info {
+    background: url(../img/tech-red.png) bottom right no-repeat $color-primary;
+    padding: 4.5rem 5rem 4.5rem 5rem;
+    color: #fff;
+    background-size: cover;
+    p {
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 480px) {
+      padding: 3rem;
+      padding-bottom: 5rem;
+    }
+  }
+  &__advantages {
+    @include flexss;
+    margin-bottom: 4rem;
+    ul {
+      @include ulClean;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      li {
+        padding-left: 2.6rem;
+        background: url(../img/check-mark.png) 0 0.6rem no-repeat;
+        background-size: 1.6rem;
+        @media (max-width: 480px) {
+          background-size: contain;
+          background-position: 0 0;
+        }
+      }
+    }
+  }
+}

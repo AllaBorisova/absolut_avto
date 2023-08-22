@@ -1,0 +1,40 @@
+main.main
+	.container
+		.breadcrumbs
+			ul
+				li
+					a(href="/") Главная
+				li
+					span.breadcrumbs__arrow
+				li
+					span Личный кабинет
+		.lk
+			.lk__wrap
+				.lk__left
+					.lk__menu
+						ul
+							li
+								a.lk__link(href="")
+									i.fa-solid.fa-user
+									| Личные данные
+							li
+								a.lk__link.active(href="")
+									i.fa-regular.fa-heart
+									| Избранные товары
+							li
+								a.lk__link(href="") 
+									i.fa-solid.fa-gear
+									| История заказов
+					a.button.button_red.button_full(href="")
+						i.fa-solid.fa-arrow-right-from-bracket
+						| Выйти из личного кабинета
+					a.button.button_change.button_full(href="")
+						i.fa-solid.fa-lock
+						| Сменить пароль
+					.lk__img 
+						img(src="./img/lk-img.png" alt="")
+				.lk__right
+					.lk__subtitle Избранные товары
+					.catalog__items.catalog_items_4
+						- for (var x = 0; x < 2; x++)
+							+product-card-favorite('product-big.png', 'LADA 21050350204090', '4221v', 'В наличии в Оренбурге', '1 123 руб.', 'Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз')

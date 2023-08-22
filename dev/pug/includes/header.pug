@@ -1,0 +1,45 @@
+.bg-menu
+header.header
+	.header__top
+		.container.container_flex
+			.header__contact.header__city 
+				i.fa-solid.fa-location-dot
+				| Оренбург
+			a.header__contact.header__phone(href="+73532000000")
+				i.fa-solid.fa-phone 
+				| +7 (3532) 00-00-00
+			a.header__link(href="") Смотреть контакты
+			a.header__link.m-l-auto(href="") Вход в личный кабинет
+			a.header__link(href="") Регистрация
+	.header__middle
+		.container.container_flex
+			a.logo(href="/index.html")
+				img(src="./img/logo.png" alt="")
+			.nav-menu
+				button.nav-catalog 
+					span.hamburger.hamburger--squeeze.js-hamburger
+						.hamburger-box
+							.hamburger-inner
+					| Каталог
+				nav.menu
+					.menu__title Товары
+						a(href="") Весь каталог
+					+list-links('Автоаксессуары', 'Автохимия и масло', 'Аккумуляторы', 'Запчасти ВАЗ', 'Инструменты и оборудование', 'Средства для малярных и кузовных работ')
+			.header__search
+				form.search-form(action="")
+					input.search-form__input(type="text" placeholder="Наименование / артикул / номер детали / VIN-код")
+					button.search-form__button(type="submit" value="")
+						span.bg-search
+			.header__links
+				a.header__link(href="")
+					i.fa-solid.fa-percent
+				a.header__link(href="")
+					i.fa-regular.fa-heart
+			a.header__cart(href="")
+				.bg-shopping_cart
+				span.badge 0
+	
+	.header__menu 
+		.container 
+			+list-links('Автоаксессуары', 'Автохимия и масло', 'Аккумуляторы', 'Запчасти ВАЗ', 'Инструменты и оборудование', 'Средства для малярных и кузовных работ')
+

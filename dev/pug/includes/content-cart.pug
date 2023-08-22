@@ -1,0 +1,83 @@
+main.main
+	.container
+		.breadcrumbs
+			ul
+				li
+					a(href="/") Главная
+				li
+					span.breadcrumbs__arrow
+				li
+					span Корзина
+		h1.h1 Корзина
+		.cart-detail
+			.cart-detail__info
+				.coupon
+					.coupon__title Введите код купона на скидку:
+					form.coupon__form(action="")
+						input.coupon__input(type="text" placeholder="Например: СКИДКА15")
+						button.button.coupon__submit(type="submit")
+							i.fa-solid.fa-arrow-right-long
+				.cart-detail__itog 
+					span Итого:
+					span.cart-detail__price 2 246 руб.
+				a.button.button_red(href="") Перейти к оформлению заказа
+			.cart-detail__items
+				.cart-detail__top
+					.cart-detail__search 
+						form(action="")
+							input(type="text" placeholder="Поиск по корзине")
+					.cart-detail__count В корзине 2 товара
+					a.cart-detail__clear(href="")
+						i.fa-solid.fa-xmark
+						| Очистить корзину
+				.cart-detail__item
+					.cart-detail__img
+						a(href="")
+							img(src="./img/product-big.png" alt="")
+					.cart-detail__about
+						a.catalog__name(href="") Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз
+						.catalog__artikul
+							a(href="") LADA 21050350204090
+							| 
+							span 4221v
+					.cart-detail__one-price
+						span 1 123 руб.
+						| цена за ед. товара
+					.count
+						span.count__minus
+							i.fa-solid.fa-minus
+						.count__info
+							input.count__prod(type="number" name="" value="1")
+							span шт
+						span.count__plus 
+							i.fa-solid.fa-plus
+					.cart-detail__full-price 1 123 руб.
+					a.cart-detail__delete.button.button_bordered(href="")
+						i.fa-regular.fa-trash-can
+						| Удалить
+				.cart-detail__item
+					.cart-detail__img
+						a(href="")
+							img(src="./img/product-big.png" alt="")
+					.cart-detail__about
+						a.catalog__name(href="") Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз
+						.catalog__artikul
+							a(href="") LADA 21050350204090
+							| 
+							span 4221v
+					.cart-detail__one-price
+						span 1 123 руб.
+						| цена за ед. товара
+					.count
+						span.count__minus
+							i.fa-solid.fa-minus
+						.count__info
+							input.count__prod(type="number" name="" value="1")
+							span шт
+						span.count__plus 
+							i.fa-solid.fa-plus
+					.cart-detail__full-price 1 123 руб.
+					a.cart-detail__delete.button.button_bordered(href="")
+						i.fa-regular.fa-trash-can
+						| Удалить
+		.section-about__info Предложения на сайте не являются публичной офертой

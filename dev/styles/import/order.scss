@@ -1,0 +1,232 @@
+.order-detail {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  margin-bottom: 10rem;
+  @media (max-width: 992px) {
+    margin-bottom: 4rem;
+  }
+
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+  }
+  &__left {
+    flex: 1;
+  }
+  &__right {
+    width: 45.8rem;
+    border: 1px solid $color-border;
+    @media (max-width: 992px) {
+      width: 100%;
+      order: -1;
+    }
+  }
+  &__block {
+    margin-bottom: 2rem;
+    border: 1px solid $color-border;
+  }
+  &__block-title {
+    display: flex;
+    align-items: center;
+    height: 6.1rem;
+    background: #f9f9f9;
+    padding: 0 3.2rem;
+    gap: 1.8rem;
+    .change-link {
+      margin-left: auto;
+      text-decoration: underline;
+      font-size: 1.4rem;
+      line-height: 2.6rem;
+      text-transform: uppercase;
+      color: $color-second;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    @media (max-width: 480px) {
+      padding: 0 2rem;
+      gap: 1rem;
+    }
+  }
+  &__title {
+    font-size: 2.1rem;
+    line-height: 2.6rem;
+    font-weight: bold;
+    color: $color-link;
+  }
+  &__count {
+    @include flexcc;
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.4rem;
+    background: $color-link;
+    flex: none;
+    &_red {
+      background: $color-primary;
+    }
+  }
+  &__block-body {
+    padding: 2rem 3rem 3rem 3rem;
+    border-top: 1px solid $color-border;
+    @media (max-width: 480px) {
+      padding: 2rem;
+    }
+  }
+  &__block-field {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__block-label {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    sup {
+      color: red;
+    }
+  }
+
+  &__block-input {
+    position: relative;
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      height: 5rem;
+      border: 1px solid $color-input-border;
+      padding: 0 2rem;
+      background: #f9f9f9;
+      width: 100%;
+      font-size: 1.6rem;
+      border-radius: 0.5rem;
+    }
+    textarea {
+      border: 1px solid $color-input-border;
+      padding: 2rem;
+      background: #f6f6f6;
+      width: 100%;
+      height: 12.5rem;
+    }
+    &_search {
+      input[type="text"] {
+        padding-left: 5.6rem;
+        background: url(../img/loupe.png) 2.1rem center no-repeat #f6f6f6;
+        background-size: 1.6rem;
+        padding-right: 4rem;
+      }
+      .clear-input {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 1.4rem;
+        right: 1.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+  &__options {
+    padding: 2.2rem 2.9rem;
+    font-size: 1.8rem;
+    @media (max-width: 480px) {
+      font-size: 1.6rem;
+      padding: 2rem;
+    }
+  }
+  &__option {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+    &-dots {
+      flex: 1;
+      border-bottom: 1px dotted $color-text;
+    }
+  }
+  &__itog {
+    margin: 0rem 2.9rem;
+    margin-top: 1rem;
+    padding: 2.2rem 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    border-top: 1px solid $color-border;
+    @media (max-width: 480px) {
+      margin: 0rem 2rem;
+      padding: 2rem 0;
+    }
+  }
+  &__item-top,
+  &__item {
+    display: grid;
+    // grid-template-columns:
+    //   minmax(min-content, 46.5rem) minmax(min-content, 8rem)
+    //   minmax(min-content, 13rem) minmax(min-content, 12rem) auto;
+    grid-template-columns: 40% 15% 15% 15% 15%;
+    text-align: center;
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  &__item-top {
+    font-size: 1.4rem;
+    line-height: 1em;
+    padding: 1.3rem 0;
+    text-align: center;
+    border-bottom: 1px solid $color-border;
+    color: #bfbfbf;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    padding: 1.8rem 0;
+    font-size: 1.6rem;
+    .cart-detail__img img {
+      max-width: 13rem;
+    }
+    .cart-detail__about {
+      font-size: 1.4rem;
+    }
+    .catalog__name {
+      font-size: 1.6rem;
+    }
+  }
+  &__item-name {
+    padding: 0 2rem;
+    text-align: left;
+    display: flex;
+    gap: 2rem;
+  }
+  &__flex {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    @media (max-width: 480px) {
+      margin-top: 2rem;
+    }
+  }
+  &__item-img {
+    max-width: 14.5rem;
+  }
+  &__item-link {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  // .custom-checkbox {
+  //   margin-bottom: 3rem;
+  // }
+  .custom-radio:not(:last-child) {
+    margin-bottom: 1.8rem;
+  }
+}
+.order-detail__item .order-detail__item-summ {
+  font-weight: bold;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Корзина</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./libs/css/hamburgers.css">
+    <link rel="stylesheet" href="./libs/slick/slick.css">
+    <link rel="stylesheet" href="./css/all.css">
+  </head>
+  <body>
+    <div class="page-flex">
+      <div class="bg-menu"></div>
+      <header class="header">
+        <div class="header__top">
+          <div class="container container_flex">
+            <div class="header__contact header__city"> <i class="fa-solid fa-location-dot"></i>Оренбург</div><a class="header__contact header__phone" href="+73532000000"><i class="fa-solid fa-phone"> </i>+7 (3532) 00-00-00</a><a class="header__link" href="">Смотреть контакты</a><a class="header__link m-l-auto" href="">Вход в личный кабинет</a><a class="header__link" href="">Регистрация</a>
+          </div>
+        </div>
+        <div class="header__middle">
+          <div class="container container_flex"><a class="logo" href="/index.html"><img src="./img/logo.png" alt=""></a>
+            <div class="nav-menu">
+              <button class="nav-catalog"> <span class="hamburger hamburger--squeeze js-hamburger">
+                  <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                  </div></span>Каталог</button>
+              <nav class="menu">
+                <div class="menu__title">Товары<a href="">Весь каталог</a></div>
+                <ul>
+                  <li><a href="">Автоаксессуары</a></li>
+                  <li><a href="">Автохимия и масло</a></li>
+                  <li><a href="">Аккумуляторы</a></li>
+                  <li><a href="">Запчасти ВАЗ</a></li>
+                  <li><a href="">Инструменты и оборудование</a></li>
+                  <li><a href="">Средства для малярных и кузовных работ</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__search">
+              <form class="search-form" action="">
+                <input class="search-form__input" type="text" placeholder="Наименование / артикул / номер детали / VIN-код">
+                <button class="search-form__button" type="submit" value=""><span class="bg-search"></span></button>
+              </form>
+            </div>
+            <div class="header__links"><a class="header__link" href=""><i class="fa-solid fa-percent"></i></a><a class="header__link" href=""><i class="fa-regular fa-heart"></i></a></div><a class="header__cart" href="">
+              <div class="bg-shopping_cart"></div><span class="badge">0</span></a>
+          </div>
+        </div>
+        <div class="header__menu"> 
+          <div class="container"> 
+            <ul>
+              <li><a href="">Автоаксессуары</a></li>
+              <li><a href="">Автохимия и масло</a></li>
+              <li><a href="">Аккумуляторы</a></li>
+              <li><a href="">Запчасти ВАЗ</a></li>
+              <li><a href="">Инструменты и оборудование</a></li>
+              <li><a href="">Средства для малярных и кузовных работ</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="/">Главная</a></li>
+              <li><span class="breadcrumbs__arrow"></span></li>
+              <li><span>Корзина</span></li>
+            </ul>
+          </div>
+          <h1 class="h1">Корзина</h1>
+          <div class="cart-detail">
+            <div class="cart-detail__info">
+              <div class="coupon">
+                <div class="coupon__title">Введите код купона на скидку:</div>
+                <form class="coupon__form" action="">
+                  <input class="coupon__input" type="text" placeholder="Например: СКИДКА15">
+                  <button class="button coupon__submit" type="submit"><i class="fa-solid fa-arrow-right-long"></i></button>
+                </form>
+              </div>
+              <div class="cart-detail__itog"> <span>Итого:</span><span class="cart-detail__price">2 246 руб.</span></div><a class="button button_red" href="">Перейти к оформлению заказа</a>
+            </div>
+            <div class="cart-detail__items">
+              <div class="cart-detail__top">
+                <div class="cart-detail__search"> 
+                  <form action="">
+                    <input type="text" placeholder="Поиск по корзине">
+                  </form>
+                </div>
+                <div class="cart-detail__count">В корзине 2 товара</div><a class="cart-detail__clear" href=""><i class="fa-solid fa-xmark"></i>Очистить корзину</a>
+              </div>
+              <div class="cart-detail__item">
+                <div class="cart-detail__img"><a href=""><img src="./img/product-big.png" alt=""></a></div>
+                <div class="cart-detail__about"><a class="catalog__name" href="">Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз</a>
+                  <div class="catalog__artikul"><a href="">LADA 21050350204090</a> <span>4221v</span></div>
+                </div>
+                <div class="cart-detail__one-price"><span>1 123 руб.</span>цена за ед. товара</div>
+                <div class="count"><span class="count__minus"><i class="fa-solid fa-minus"></i></span>
+                  <div class="count__info">
+                    <input class="count__prod" type="number" name="" value="1"><span>шт</span>
+                  </div><span class="count__plus"> <i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="cart-detail__full-price">1 123 руб.</div><a class="cart-detail__delete button button_bordered" href=""><i class="fa-regular fa-trash-can"></i>Удалить</a>
+              </div>
+              <div class="cart-detail__item">
+                <div class="cart-detail__img"><a href=""><img src="./img/product-big.png" alt=""></a></div>
+                <div class="cart-detail__about"><a class="catalog__name" href="">Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз</a>
+                  <div class="catalog__artikul"><a href="">LADA 21050350204090</a> <span>4221v</span></div>
+                </div>
+                <div class="cart-detail__one-price"><span>1 123 руб.</span>цена за ед. товара</div>
+                <div class="count"><span class="count__minus"><i class="fa-solid fa-minus"></i></span>
+                  <div class="count__info">
+                    <input class="count__prod" type="number" name="" value="1"><span>шт</span>
+                  </div><span class="count__plus"> <i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="cart-detail__full-price">1 123 руб.</div><a class="cart-detail__delete button button_bordered" href=""><i class="fa-regular fa-trash-can"></i>Удалить</a>
+              </div>
+            </div>
+          </div>
+          <div class="section-about__info">Предложения на сайте не являются публичной офертой</div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="footer__columns">
+              <div class="footer__column"> 
+                <div class="footer__caption">Клиентам</div>
+                <div class="footer__menu"> 
+                  <ul>
+                    <li><a href="">Розничные магазины</a></li>
+                    <li><a href="">Новым клиентам</a></li>
+                    <li><a href="">Электронный заказчик</a></li>
+                    <li><a href="">Возврат товара</a></li>
+                    <li><a href="">Сертификаты качества</a></li>
+                    <li><a href="">Доставка</a></li>
+                    <li><a href="">Новости</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__column"> 
+                <div class="footer__caption">Компания</div>
+                <div class="footer__menu"> 
+                  <ul>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Партнеры</a></li>
+                    <li><a href="">Поставщикам</a></li>
+                    <li><a href="">Работа у нас</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__column"> 
+                <div class="footer__caption">Контакты</div>
+                <div class="footer__contact"><i class="fa-solid fa-location-dot"></i>Оренбург, Lorem ipsum dolor sit amet</div><a class="footer__contact" href="tel:+73532000000"><i class="fa-solid fa-phone"> </i>+7 (3532) 00-00-00</a>
+                <div class="footer__contact footer__work"><i class="fa-solid fa-clock"></i>
+                  <div><span>Время работы:</span><a href="">пн-вс: с 09:00 до 20:00</a></div>
+                </div><a href="" target="_blank"><span class="bg-vk_logo_svgrepo_com"></span></a>
+              </div>
+              <div class="footer__column"> 
+                <div class="footer__info"> 
+                  <p>Вся информация на сайте – собственность интернет-магазина. Публикация информации с сайта FixAuto без разрешения запрещена</p>
+                </div>
+                <div class="footer__pays"> 
+                  <div class="bg-visa"></div>
+                  <div class="bg-Mastercard_Logo_Free_PNG"></div>
+                  <div class="bg-mir_logo"></div>
+                </div><a class="footer__link" href="">Прайс-лист (Excel)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container container_flex">
+            <div class="copyright">2023 Все права защищены</div>
+            <div class="create"><a href="">Создание сайта ОренПро</a></div>
+            <div class="politics"><a href="">Политика конфиденциальности</a></div>
+          </div>
+        </div>
+      </footer>
+      <script src="./libs/js/jquery.min.js"></script>
+      <script src="./libs/js/lightTabs.js"></script>
+      <script src="./libs/js/jquery.maskedinput.js"></script>
+      <script src="./libs/slick/slick.js"></script>
+      <script src="./js/main.js"></script>
+    </div>
+  </body>
+</html>

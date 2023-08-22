@@ -1,0 +1,91 @@
+main.main
+	.container
+		.breadcrumbs
+			ul
+				li
+					a(href="/") Главная
+				li
+					span.breadcrumbs__arrow
+				li
+					span Личный кабинет
+		.lk
+			.lk__wrap
+				.lk__left
+					.lk__menu
+						ul
+							li
+								a.lk__link.active(href="")
+									i.fa-solid.fa-user
+									| Личные данные
+							li
+								a.lk__link(href="")
+									i.fa-regular.fa-heart
+									| Избранные товары
+							li
+								a.lk__link(href="") 
+									i.fa-solid.fa-gear
+									| История заказов
+					a.button.button_red.button_full(href="")
+						i.fa-solid.fa-arrow-right-from-bracket
+						| Выйти из личного кабинета
+					a.button.button_change.button_full(href="")
+						i.fa-solid.fa-lock
+						| Сменить пароль
+					.lk__img 
+						img(src="./img/lk-img.png" alt="")
+				.lk__right
+					.lk__bg
+						form.form(action="")
+							.lk__subtitle Личные данные
+							.form__columns3
+								.form__block
+									input(type="text" placeholder="Фамилия")
+								.form__block
+									input(type="text" placeholder="Имя")
+								.form__block
+									input(type="text" placeholder="Отчество")
+								.block-info-grey.columns3 
+									i.fa-solid.fa-circle-info
+									| Полные  ФИО могут потребоваться при получении заказа
+							.form__columns3
+								.form__block
+									input(type="email" placeholder="E-mail")
+								.form__block
+									input(type="tel" placeholder="Телефон")
+								.block-info-grey.columns3 
+									i.fa-solid.fa-circle-info
+									| Номер телефона и e-mail используются для оповещений об изменении статуса заказа
+							.form__columns2
+								.form__block.form__block_flex
+									label.form__label Пол
+									label.custom-radio 
+										input.custom-radio__radio(type="radio" name="sex")
+										span.custom-radio__span
+										span.custom-radio__label М
+									label.custom-radio 
+										input.custom-radio__radio(type="radio" name="sex")
+										span.custom-radio__span
+										span.custom-radio__label Ж
+								.form__block.form__block_flex
+									label.form__label Дата рождения
+									input.birthday-input(type="text" placeholder="01.01.1970")
+							.lk__hr
+							.lk__subtitle Адрес доставки
+							.form__columns5
+								.form__block
+									input(type="text" placeholder="Населенный пункт")
+								.form__block
+									input(type="text" placeholder="Улица")
+								.form__block
+									input(type="text" placeholder="№ дома")
+								.form__block
+									input(type="text" placeholder="№ кв")
+								.form__block
+									input(type="text" placeholder="Этаж")
+							.form__columns2.form__block_flex
+								input.button.button_red(type="submit" value="Сохранить изменения")
+								label.custom-checkbox 
+									input.custom-checkbox__checkbox(type="checkbox" name="")
+									span.custom-checkbox__span
+									span.custom-checkbox__label Даю согласие на обработку своих 
+										a(href="") персональных данных

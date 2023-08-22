@@ -1,0 +1,316 @@
+.bg-menu {
+  position: fixed;
+  z-index: 998;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  // background: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.header {
+  position: relative;
+  z-index: 999;
+  box-shadow: 0px 13px 29px 0px rgba(64, 63, 76, 0.1);
+  background: #fff;
+  padding-bottom: 2rem;
+  // margin-bottom: 6rem;
+  @media (max-width: 767px) {
+    padding-bottom: 0rem;
+  }
+  &__top {
+    background: $color-primary;
+    color: #fff;
+    padding: 1.5rem 0;
+    font-size: 1.4rem;
+    line-height: 1em;
+    .container_flex {
+      justify-content: flex-start;
+      gap: 3rem;
+      @media (max-width: 900px) {
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      @media (max-width: 767px) {
+        gap: 1rem;
+        justify-content: center;
+      }
+    }
+  }
+  &__contact {
+    display: flex;
+    gap: 1rem;
+  }
+  // &__city {
+  //   padding-left: 2.1rem;
+  //   background: url(../img/pin.png) left center no-repeat;
+  //   background-size: 1.1rem;
+  // }
+  @media (max-width: 480px) {
+    &__phone,
+    &__city {
+      font-size: 0px;
+      i {
+        font-size: 1.4rem;
+      }
+    }
+    .header__link {
+      margin-left: 0px;
+    }
+  }
+  &__link {
+    text-decoration: underline;
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+    img {
+      display: block;
+    }
+  }
+  &__middle {
+    padding-top: 2.6rem;
+    padding-bottom: 2.9rem;
+    position: relative;
+    .container_flex {
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      @media (max-width: 900px) {
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__search {
+    flex: 1;
+    @media (max-width: 900px) {
+      order: 5;
+      width: 100%;
+      flex: none;
+    }
+  }
+  &__links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-size: 2.6rem;
+    color: $color-link-header;
+    @media (max-width: 992px) {
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .menu {
+      display: none;
+    }
+  }
+
+  &__cart {
+    padding: 1.1rem 1.3rem;
+    border-radius: 0.5rem;
+    background: $color-second;
+    display: flex;
+    gap: 0.9rem;
+    img {
+      display: block;
+    }
+    .badge {
+      @include flexcc;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: #fff;
+      border-radius: 50%;
+      font-weight: bold;
+      color: $color-text;
+    }
+    @include tr;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__menu {
+    @media (max-width: 992px) {
+      display: none;
+    }
+    ul {
+      @include ulClean;
+      @include flexcs;
+      gap: 2rem;
+      @media (max-width: 1390px) {
+        flex-wrap: wrap;
+      }
+      li {
+        a {
+          color: $color-text;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.logo {
+  @media (max-width: 767px) {
+    max-width: 90px;
+  }
+  img {
+    display: block;
+  }
+}
+.nav-menu {
+  position: relative;
+  @media (max-width: 900px) {
+    margin-left: auto;
+  }
+  @media (max-width: 480px) {
+    position: static;
+  }
+}
+.menu {
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px,
+    rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+  position: absolute;
+  // overflow: hidden auto;
+  width: 30rem;
+  padding: 3rem;
+  outline: 0px;
+  display: none;
+  margin-top: 1rem;
+  z-index: 5;
+  @media (max-width: 768px) {
+    right: 0;
+  }
+  @media (max-width: 480px) {
+    right: 1rem;
+  }
+  &__title {
+    font-size: 2rem;
+
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    @include flexcs;
+    a {
+      font-weight: normal;
+      text-decoration: underline;
+      font-size: 1.6rem;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  ul {
+    @include ulClean;
+    position: relative;
+    li {
+      a {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: $color-text;
+        display: block;
+
+        @include tr;
+        text-decoration: underline;
+        &:hover,
+        &.active {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.open-menu {
+  .bg-menu,
+  .menu {
+    display: block;
+  }
+}
+.catalog-menu {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2.3rem;
+  margin-bottom: 6rem;
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 4rem;
+  }
+  &__name {
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+    font-weight: 600;
+    color: $color-link;
+    font-family: $font-second;
+    display: block;
+    position: relative;
+    z-index: 2;
+
+    img {
+      margin-left: 1rem;
+      display: inline;
+      display: none;
+    }
+  }
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    filter: grayscale(1);
+    @include tr;
+    background-size: 100%;
+    @media (max-width: 480px) {
+      background-size: 50%;
+    }
+  }
+  &__item {
+    background: $color-border;
+    padding: 3rem 2rem;
+    position: relative;
+    height: 32.3rem;
+
+    &:hover {
+      outline: 2px solid $color-primary;
+      box-shadow: 0px 1.2rem 4rem 0px rgba(64, 63, 76, 0.17);
+      .catalog-menu__img {
+        filter: grayscale(0);
+      }
+      .catalog-menu__name {
+        img {
+          display: inline;
+        }
+      }
+    }
+    @media (max-width: 480px) {
+      height: 19rem;
+    }
+  }
+}
+
+.bg-shopping_cart {
+  width: 28px;
+  height: 28px;
+  background: url("../img/css_sprites.png") -58px -115px;
+}

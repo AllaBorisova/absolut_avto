@@ -1,0 +1,175 @@
+main.main
+	.container
+		.breadcrumbs
+			ul
+				li
+					a(href="/") Главная
+				li
+					span.breadcrumbs__arrow
+				li
+					span Личный кабинет
+		.lk
+			.lk__wrap
+				.lk__left
+					.lk__menu
+						ul
+							li
+								a.lk__link(href="")
+									i.fa-solid.fa-user
+									| Личные данные
+							li
+								a.lk__link(href="")
+									i.fa-regular.fa-heart
+									| Избранные товары
+							li
+								a.lk__link.active(href="") 
+									i.fa-solid.fa-gear
+									| История заказов
+					a.button.button_red.button_full(href="")
+						i.fa-solid.fa-arrow-right-from-bracket
+						| Выйти из личного кабинета
+					a.button.button_change.button_full(href="")
+						i.fa-solid.fa-lock
+						| Сменить пароль
+					.lk__img 
+						img(src="./img/lk-img.png" alt="")
+				.lk__right
+					.lk__subtitle История заказов
+					.lk-order
+						.lk-order__top 
+							.lk-order__icon 
+							.lk-order__inner
+								.lk-order__inner-name
+									.lk-order__title Заказ № 000123
+									.lk-order__status.lk-order__status_cancel Отменено
+								.lk-order__date От 31.05.2022
+						.lk-order__info
+								.lk-order__options
+									.lk-order-option
+										.lk-order-option__name Стоимость товаров:
+										.lk-order-option__dots
+										.lk-order-option__value 2 246 руб.
+									.lk-order-option
+										.lk-order-option__name Стоимость доставки:
+										.lk-order-option__dots
+										.lk-order-option__value Бесплатно
+									.lk-order-option
+										.lk-order-option__name Способ оплаты:
+										.lk-order-option__dots
+										.lk-order-option__value Наличные
+									.lk-order-option
+										.lk-order-option__name Способ доставки:
+										.lk-order-option__dots
+										.lk-order-option__value Самовывоз
+									.lk-order-option
+										.lk-order-option__name Адрес доставки:
+										.lk-order-option__dots
+										.lk-order-option__value Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+						.lk-order__middle
+							.order-detail__block
+								.order-detail__items 
+									.order-detail__item-top 
+										.order-detail__item-name Наименование
+										.order-detail__item-sale Скидка
+										.order-detail__item-price Цена
+										.order-detail__item-count Кол-во
+										.order-detail__item-summ Сумма
+									.order-detail__item 
+										.order-detail__item-name 
+											.cart-detail__img
+												a(href="")
+													img(src="./img/product-big.png" alt="")
+											.cart-detail__about
+												a.catalog__name(href="") Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз
+												.catalog__artikul
+													a(href="") LADA 21050350204090
+													| 
+													span 4221v
+										.order-detail__item-sale 0%
+										.order-detail__item-price 8 926 руб.
+										.order-detail__item-count 1 шт.
+										.order-detail__item-summ 8 926 руб.
+									.order-detail__item 
+										.order-detail__item-name 
+											.cart-detail__img
+												a(href="")
+													img(src="./img/product-big.png" alt="")
+											.cart-detail__about
+												a.catalog__name(href="") Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз
+												.catalog__artikul
+													a(href="") LADA 21050350204090
+													| 
+													span 4221v
+										.order-detail__item-sale 0 %
+										.order-detail__item-price 8 926 руб.
+										.order-detail__item-count 1 шт.
+										.order-detail__item-summ 8 926 руб.
+					.lk-order
+						.lk-order__top 
+							.lk-order__icon 
+							.lk-order__inner
+								.lk-order__inner-name
+									.lk-order__title Заказ № 000123
+									.lk-order__status.lk-order__status_success Выполнено
+								.lk-order__date От 31.05.2022
+						.lk-order__info
+								.lk-order__options
+									.lk-order-option
+										.lk-order-option__name Стоимость товаров:
+										.lk-order-option__dots
+										.lk-order-option__value 2 246 руб.
+									.lk-order-option
+										.lk-order-option__name Стоимость доставки:
+										.lk-order-option__dots
+										.lk-order-option__value Бесплатно
+									.lk-order-option
+										.lk-order-option__name Способ оплаты:
+										.lk-order-option__dots
+										.lk-order-option__value Наличные
+									.lk-order-option
+										.lk-order-option__name Способ доставки:
+										.lk-order-option__dots
+										.lk-order-option__value Самовывоз
+									.lk-order-option
+										.lk-order-option__name Адрес доставки:
+										.lk-order-option__dots
+										.lk-order-option__value Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+						.lk-order__middle
+							.order-detail__block
+								.order-detail__items 
+									.order-detail__item-top 
+										.order-detail__item-name Наименование
+										.order-detail__item-sale Скидка
+										.order-detail__item-price Цена
+										.order-detail__item-count Кол-во
+										.order-detail__item-summ Сумма
+									.order-detail__item 
+										.order-detail__item-name 
+											.cart-detail__img
+												a(href="")
+													img(src="./img/product-big.png" alt="")
+											.cart-detail__about
+												a.catalog__name(href="") Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз
+												.catalog__artikul
+													a(href="") LADA 21050350204090
+													| 
+													span 4221v
+										.order-detail__item-sale 0%
+										.order-detail__item-price 8 926 руб.
+										.order-detail__item-count 1 шт.
+										.order-detail__item-summ 8 926 руб.
+									.order-detail__item 
+										.order-detail__item-name 
+											.cart-detail__img
+												a(href="")
+													img(src="./img/product-big.png" alt="")
+											.cart-detail__about
+												a.catalog__name(href="") Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз
+												.catalog__artikul
+													a(href="") LADA 21050350204090
+													| 
+													span 4221v
+										.order-detail__item-sale 0 %
+										.order-detail__item-price 8 926 руб.
+										.order-detail__item-count 1 шт.
+										.order-detail__item-summ 8 926 руб.

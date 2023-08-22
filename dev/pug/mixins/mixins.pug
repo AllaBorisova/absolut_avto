@@ -1,0 +1,91 @@
+mixin product-card(imgsrc, option1, option2, availible, price, name)
+	.catalog__item
+		a.catalog__img(style='background-image:url(./img/' + imgsrc +')')
+			.catalog__brand(style='background-image:url(./img/brand.png)')
+		.catalog__about
+			a.catalog__name(href="")= name
+			.catalog__artikul
+				a(href="")= option1
+				| 
+				span= option2
+		.count
+			span.count__minus
+				i.fa-solid.fa-minus
+			.count__info
+				input.count__prod(type="number" name="" value="1")
+				span шт
+			span.count__plus 
+				i.fa-solid.fa-plus
+		.product-available.product-available_yes
+			i.fa-solid.fa-check
+			| В наличии в Оренбурге
+		.catalog__price= price
+		.catalog__buttons
+			a.button.button_to-cart.in-cart(href="") 
+				span.bg-to_cart
+			a.button-favorite(href="")
+				i.fa-regular.fa-heart
+mixin product-card-order(imgsrc, option1, option2, availible, price, name)
+	.catalog__item
+		a.catalog__img(style='background-image:url(./img/' + imgsrc +')')
+			.catalog__brand(style='background-image:url(./img/brand.png)')
+		.catalog__about
+			a.catalog__name(href="")= name
+			.catalog__artikul
+				a(href="")= option1
+				| 
+				span= option2
+		.count
+			span.count__minus
+				i.fa-solid.fa-minus
+			.count__info
+				input.count__prod(type="number" name="" value="1")
+				span шт
+			span.count__plus 
+				i.fa-solid.fa-plus
+		.product-available.product-available_no
+			i.fa-solid.fa-clock
+			| Под заказ
+		.catalog__price= price
+		.catalog__buttons
+			a.button.button_to-cart(href="") 
+				span.bg-to_cart
+			a.button-favorite(href="")
+				i.fa-regular.fa-heart
+mixin product-card-favorite(imgsrc, option1, option2, availible, price, name)
+	.catalog__item
+		a.catalog__img(style='background-image:url(./img/' + imgsrc +')')
+			.catalog__brand(style='background-image:url(./img/brand.png)')
+		.catalog__about
+			a.catalog__name(href="")= name
+			.catalog__artikul
+				a(href="")= option1
+				| 
+				span= option2
+		.count
+			span.count__minus
+				i.fa-solid.fa-minus
+			.count__info
+				input.count__prod(type="number" name="" value="1")
+				span шт
+			span.count__plus 
+				i.fa-solid.fa-plus
+		.catalog__price= price
+		.catalog__buttons
+			a.button.button_to-cart(href="") 
+			a.button-favorite.active(href="")
+				i.fa-regular.fa-heart
+mixin list-links (...items)
+	ul
+		each item in items
+			li
+				a(href="")= item
+mixin list (...items)
+	ul
+		each item in items
+			li= item
+mixin custom-checkbox(text)
+	label.custom-checkbox 
+		input.custom-checkbox__checkbox(type="checkbox" name="")
+		span.custom-checkbox__span
+		span.custom-checkbox__label= text

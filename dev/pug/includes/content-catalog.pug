@@ -1,0 +1,71 @@
+main.main
+  .container
+    .breadcrumbs
+      ul
+        li
+          a(href="/") Главная
+        li
+          span.breadcrumbs__arrow
+        li
+          a(href="") Запчасти ВАЗ
+        li
+          span.breadcrumbs__arrow
+        li
+          span АвтоВаз
+    h1.h1 Запчасти АвтоВаз
+    .catalog
+      .catalog__inner
+        .catalog__left
+          .catalog__filters
+            .catalog__filters-block.open
+              .catalog__filters-caption
+                span.catalog__filters-icon
+                | Запчасти на автоваз
+              .catalog__filters-variants
+                +custom-checkbox('Все')
+                +custom-checkbox('Двигатель')
+                +custom-checkbox('Трансмиссия')
+                +custom-checkbox('Шрус')
+            .catalog__filters-block
+              .catalog__filters-caption
+                span.catalog__filters-icon
+                | Автоаксессуары
+              .catalog__filters-variants
+                +custom-checkbox('Все')
+                +custom-checkbox('Двигатель')
+                +custom-checkbox('Трансмиссия')
+                +custom-checkbox('Шрус')
+            .catalog__filters-block
+              .catalog__filters-caption
+                span.catalog__filters-icon
+                | Автопринадлежности
+              .catalog__filters-variants
+                +custom-checkbox('Все')
+                +custom-checkbox('Двигатель')
+                +custom-checkbox('Трансмиссия')
+                +custom-checkbox('Шрус')
+
+        .catalog__right
+          .catalog__sort
+              span Сортировать по:
+              a.catalog__sort-link.active(href="") названию
+              a.catalog__sort-link(href="") наличию
+              a.catalog__sort-link(href="") цене
+
+          .catalog__items
+            - for (var x = 0; x < 5; x++)
+              +product-card('product-big.png', 'LADA 21050350204090', '4221v', 'В наличии в Оренбурге', '1 123 руб.', 'Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз')
+              //- +product-card('product2.png', '360x280x75', '220', '2', '44 660 руб', 'Плита индукционная AIRHOT IP2000 ')
+          .pagination
+            ul
+              li
+                a.active(href="") 1
+              li
+                a(href="") 2
+              li
+                a(href="") 3
+              li
+                a(href="")
+                  i.fa-solid.fa-chevron-right
+    .section-about__info Предложения на сайте не являются публичной офертой
+

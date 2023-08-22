@@ -1,0 +1,93 @@
+main.main
+  .container
+    .breadcrumbs
+      ul
+        li
+          a(href="/") Главная
+        li
+          span.breadcrumbs__arrow
+        li
+          a(href="") Запчасти ВАЗ
+        li
+          span.breadcrumbs__arrow
+        li
+          a(href="") АвтоВаз
+        li
+          span.breadcrumbs__arrow
+        li
+          span Запчасть
+    .product
+      .product__flex
+        .product__left
+          .product-slider
+            .product-slider_for
+              .slide
+                img(src="./img/product-big.png" alt="")
+              .slide
+                img(src="./img/product-big.png" alt="")
+              .slide
+                img(src="./img/product-big.png" alt="")
+              .slide
+                img(src="./img/product-big.png" alt="")
+              .slide
+                img(src="./img/product-big.png" alt="")
+              .slide
+                img(src="./img/product-big.png" alt="")
+            .product-slider_nav
+              .slide-min
+                img(src="img/product-big.png" alt="")
+              .slide-min
+                img(src="img/product-big.png" alt="")
+              .slide-min
+                img(src="img/product-big.png" alt="")
+              .slide-min
+                img(src="img/product-big.png" alt="")
+              .slide-min
+                img(src="img/product-big.png" alt="")
+              .slide-min
+                img(src="img/product-big.png" alt="")
+        .product__right
+          h1.h1.product__title Барабан тормозной ВАЗ 2108 АвтоВаз
+            .product__brand 
+              img(src="./img/brand.png" alt="")
+          .product__actions 
+            a.button-favorite(href="") 
+              i.fa-regular.fa-heart
+            a.copy-link(href="")
+              i.fa-solid.fa-share
+              | Копировать ссылку
+          .product__info
+            .product-options
+              .product-options__caption Характеристики
+              .product-options__option
+                .product-options__name Бренд
+                .product-options__dots
+                .product-options__value LADA
+              .product-options__option
+                .product-options__name Артикул производителя
+                .product-options__dots
+                .product-options__value 21080350207000
+              .product-options__option
+                .product-options__name Артикул поставщика
+                .product-options__dots
+                .product-options__value 6922v
+              .product-options__option
+                .product-options__name Единицы измерения
+                .product-options__dots
+                .product-options__value шт
+            .product__buttons
+              .product__price 1 123 руб.
+              a.button(href="") Добавить в корзину
+              .product-available.product-available_yes
+                i.fa-solid.fa-check
+                | В наличии в Оренбурге
+      .product__other 
+        .h2 Возможно, Вас заинтересует:
+        .catalog__items 
+          - for (var x = 0; x < 2; x++)
+            +product-card('product-big.png', 'LADA 21050350204090', '4221v', 'В наличии в Оренбурге', '1 123 руб.', 'Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз')
+          +product-card-order('product-big.png', 'LADA 21050350204090', '4221v', 'В наличии в Оренбурге', '1 123 руб.', 'Цилиндр тормозной задний ВАЗ 2105, 2108 АвтоВаз')
+    .section-about__info Предложения на сайте не являются публичной офертой
+
+
+

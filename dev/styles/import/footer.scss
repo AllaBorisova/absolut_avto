@@ -1,0 +1,163 @@
+.footer {
+  background: $color-footer-bg;
+  &__columns {
+    gap: 9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr minmax(min-content, 44.7rem);
+    @media (max-width: 992px) {
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 767px) {
+    }
+  }
+
+  &__top {
+    padding-top: 4.5rem;
+    padding-bottom: 3.4rem;
+    font-size: 1.8rem;
+
+    @media (max-width: 767px) {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &__caption {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1.8;
+    font-family: $font-second;
+    color: #ffffff;
+    @media (max-width: 480px) {
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+  // &__column {
+  //   &:last-child {
+  //     max-width: 44.7rem;
+  //   }
+  // }
+  &__menu {
+    ul {
+      @include ulClean;
+      li {
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+          @media (max-width: 480px) {
+            margin-bottom: 0.5rem;
+          }
+        }
+        a {
+          font-size: 1.8rem;
+          color: $color-footer-text;
+          @media (max-width: 480px) {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    a {
+      color: inherit;
+    }
+  }
+
+  &__phone {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__work {
+    span {
+      display: block;
+    }
+  }
+  &__info {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+    color: $color-footer-text;
+    @media (max-width: 480px) {
+      margin-bottom: 1.2rem;
+    }
+  }
+  &__pays {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.9rem;
+    margin-bottom: 2.7rem;
+    @media (max-width: 480px) {
+      margin-bottom: 1.2rem;
+      gap: 0.8rem;
+    }
+  }
+  &__link {
+    font-size: 1.4rem;
+    color: $color-footer-text;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__bottom {
+    padding: 2.5rem 0;
+    border-top: 1px solid $color-border-footer;
+    font-size: 1.8rem;
+    color: $color-footer-text;
+    @media (max-width: 767px) {
+      font-size: 1.4rem;
+      padding: 1.5rem 0;
+    }
+    .container_flex {
+      justify-content: space-between;
+      align-items: center;
+      gap: 4rem;
+      @media (max-width: 992px) {
+        gap: 1rem;
+        flex-direction: column;
+      }
+      @media (max-width: 767px) {
+        gap: 0.5rem;
+      }
+    }
+    a {
+      color: $color-footer-text;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.bg-visa {
+  width: 52px;
+  height: 32px;
+  background: url("../img/css_sprites.png") -10px -63px;
+}
+.bg-Mastercard_Logo_Free_PNG {
+  width: 54px;
+  height: 33px;
+  background: url("../img/css_sprites.png") -10px -10px;
+}
+
+.bg-mir_logo {
+  width: 73px;
+  height: 21px;
+  background: url("../img/css_sprites.png") -84px -10px;
+}
+.bg-vk_logo_svgrepo_com {
+  display: block;
+  width: 35px;
+  height: 21px;
+  background: url("../img/css_sprites.png") -106px -115px;
+}
