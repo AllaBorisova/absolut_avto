@@ -73,6 +73,7 @@ mixin product-card-favorite(imgsrc, option1, option2, availible, price, name)
 		.catalog__price= price
 		.catalog__buttons
 			a.button.button_to-cart(href="") 
+				span.bg-to_cart
 			a.button-favorite.active(href="")
 				i.fa-regular.fa-heart
 mixin list-links (...items)
